@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+/* ========== SETTING VARIABLE COLOR ==========  */
+
+body.dark {
+    --bg-color1: #1C1C1C;
+    --bg-color2: #343434;
+    --color1: #FFFF;
+    --color2: #DDD;
+}
+
+body:not(.dark) {
+    --bg-color1: #eaeae9;
+    --bg-color2: #fbfdff;
+    --color1: #3e4455;
+    --color2: #000;
+}
+
+/* ========== ROOT CSS VARIABLE ========== */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== CSS Global ========== */
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: var(--color1);
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--color1);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Dark and light mode toggle ======== */
+
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    z-index: 10;
+    right: 0;
+    border: none;
+    background-color: var(--color2);
+}
+
+body:not(.dark) .theme-toggle .lni-sun,
+body.dark .theme-toggle .lni-night {
+    cursor: pointer;
+    color: var(--bg-color2);
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+body:not(.dark) .theme-toggle .lni-night {
+    display: none;
+
+}
+
+body.dark .theme-toggle .lni-sun {
+    display: none;
+}
+
+/* ========== MAIN WRAPPER ======== */
+
+.portfolio-container {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ========== STYLE FOR HEADER NAVBAR ======== */
+header {
+    left: 0;
+    right: 0;
+    z-index: 20;
+    transition: .8s;
+    padding: 15px;
+    position: fixed;
+    background-color: var(--bg-color1);
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-navbar {
+    display: none;
+}
+
+.brand-name a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color1);
+}
+
+.navbar-toggle i {
+    font-size: 1.25rem;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+/* ========== NAVBAR FOR MOBILE VIEW ONLY ======== */
+.portfolio-navbar.show {
+    display: block;
+    position: absolute;
+    background-color: #ecf1fa;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    padding: 15px;
+    border-top: 5px solid #000;
+    text-align: center;
+}
+
+.portfolio-navbar ul li {
+    display: block;
+}
+
+.portfolio-navbar ul li a {
+    color: black;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 45px;
+}
+
+/* ========== STYLE FOR SLIDER OR ABOUT SECTION ======== */
+#about {
+    padding-top: 100px;
+    background-color: var(--bg-color1);
+}
+
+.about-content {
+    align-items: center;
+}
+
+.about-intro {
+    margin-top: 3rem;
+    width: 100%;
+    order: 2;
+}
+
+/* ========== SECTION SUBTITLE ======== */
+
+.subtitle {
+    position: relative;
+    color: #f987d6;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-left: 55px;
+}
+
+.subtitle::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+}
+
+/* ========== MAIN TITLE ======== */
+
+h1 strong,
+h2 strong {
+    background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.about-text h3 {
+    color: var(--color1);
+    margin-bottom: 10px;
+}
+
+p strong {
+    color: var(--color2);
+}
+
+/* ========== HELLO BUTTON ======== */
+.hello-btn a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 15px 45px;
+    color: #FFF;
+    background-color: #977ec7;
+    z-index: 100;
+    line-height: 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease-out 0s;
+}
+
+.hello-btn a:hover {
+    background-color: #293b5f;
+}
+
+/* ========== STYLE FOR ABOUT IMAGE ======== */
+
+.about-image {
+    width: 100%;
+    order: 1;
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.about-image img {
+    border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+}
+
+.about-image::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: linear-gradient(11deg, #291342 0%, #c60242 100%);
+    z-index: -1;
+    border-radius: 100% 50% 50% 100% / 75% 69% 69% 75%;
+    box-shadow: 2px 10px 0 0 rgba(216, 19, 19, 0.16);
+    transition: all .5s ease-in-out;
+}
+
+.about-image:hover {
+    transform: translateY(-10.5px);
+    filter: drop-shadow(0 0 30px rgba(223, 59, 13, 0.8));
+}
+
+/* ========== RESUME SECTION STYLE ======== */
+#resume {
+    background-color: var(--bg-color2);
+    padding: 60px 0;
+}
+
+.resume-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.resume-body {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 500px;
+}
+
+.resume-item {
+    display: inline;
+    position: relative;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+.resume-item a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color1);
+    line-height: 45px;
+}
+
+.resume-tab {
+    display: none;
+}
+
+.resume-tab.active {
+    display: block;
+    animation: fade .8s;
+}
+
+.resume-item.active .resume-link {
+    position: relative;
+    font-weight: 700;
+}
+
+.resume-item.active .resume-link::before {
+    position: absolute;
+    content: "";
+    background-color: #7257F2;
+    left: 0;
+    top: 30px;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+
+/* ========== ANIMATION FOR FADE EFFECT  ======== */
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========== RESUME TAB CONTENT  ======== */
+.resume-content {
+    display: flex;
+}
+
+.resume-content:not(:last-child) {
+    padding-bottom: 44px;
+}
+
+.years {
+    width: 90px;
+    flex: none;
+    color: var(--color1);
+}
+
+.qualification-content {
+    position: relative;
+    padding-left: 20px;
+}
+
+.qualification-content::before {
+    content: "";
+    height: 100%;
+    width: 3px;
+    left: 0;
+    top: -10px;
+    position: absolute;
+    background-color: #E8E8E8;
+}
+
+.qualification-content::after{
+    position: absolute;
+    content: "";
+    height: 7px;
+    width: 7px;
+    left: -2px;
+    top: 12px;
+    transform: rotate(45deg);
+    background: #e15747;
+}
+
+.qualification-content .title{
+    font-weight: 400;
+    display: inline-block;
+    color: #d55041;
+}
+
+.institution, .organization{
+    color: #78add9;
+    font-weight: 400;
+}
+
+/* ========== SKILLS BAR  ======== */
+.bar-content{
+    margin-bottom: 15px;
+}
+
+.bar-heading{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.bar-title, .bar-percentage{
+    color: var(--color1);
+}
+
+.bar-progress{
+    display: flex;
+    background-color: #e9eeef;
+    height: 8px;
+    border-radius: 5px;
+}
+
+.progress-bar{
+    width: 0;
+    display: flex;
+    position: relative;
+    transition-delay: 1.5s;
+    background-color: #A30642;
+    border-radius: 5px;
+}
+
+.resume-tab.active .progress-bar{
+    animation: progress 2000ms ease-in 1;
+}
+
+/* ========== ANIMATION FOR SKILL PROGRESS BAR  ======== */
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+}
+
+/* ========== NAVIGATION LINK WHEN SCROLL ACTIVE ======== */
+
+
+/* ========== HEADER STICK TO TOP  ======== */
+header.header-sticky{
+    position: fixed;
+    background-color: #FFF;
+    z-index: 2000;
+    transition: .8s;
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.05);
+}
+
+.header-sticky .brand-name a{
+    color: #3e4455;
+}
+
+.header-sticky .navbar-toggle i{
+    color: #3e4455;
+}
+
+.header-sticky .portfolio-navbar ul li a{
+    color: #3e4455;
+}
+/* ========== SERVICES  ======== */
+
+
+/* ========== SERVICES COUNT HOVER EFFECT  ======== */
+
+.service-count h2 {
+    font-size: 6rem;
+    position: relative;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1.1px var(--color1);
+}
+
+.service-count h2::before {
+    content: attr(data-fill-text);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    font-weight: 800;
+    transition: width 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    color: var(--color1);
+    white-space: nowrap;
+    -webkit-text-stroke: 0 transparent;
+}
+
+.service-count h2:hover::before {
+    width: 100%;
+}
+
+/* ========== PROJECTS SLIDER  ======== */
+
+
+/* ========== SWIPER ARROW AND PAGINATION   ======== */
+
+
+/* ========== STYLING SWIPER BULLETS   ======== */
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: 60%;
+    display: flex;
+    position: static;
+    margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+    width: 100%;
+    height: 5px;
+    border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+    background-image: linear-gradient(162.41deg, #43baff 1.77%, #7141b1 92.78%);
+}
+
+.swiper-pagination-bullet:hover {
+    background-image: linear-gradient(162.41deg, #43baff 1.77%, #7141b1 92.78%);
+    opacity: 1;
+    outline: none;
+}
+
+/* ========== TESTIMONIAL SLIDER   ======== */
+
+
+/* ========== CONTACT SECTION STYLE   ======== */
+
+
+/* ========== FOOTER CONTACT FORM   ======== */
+
+
+/* ========== MESSAGE FOLLOWING FORM SUBMISSION: ERROR OR SUCCESS   ======== */
+
+
+/* ========== LOADER ANIMATION   ======== */
+
+@keyframes rotateme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========== MAIN FOOTER   ======== */
+
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* ============= Medium devices (tablets, 768px and up) ============= */
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        color: var(--color1);
+        font-weight: 600;
+    }
+
+    /* ========== HEADER RESPONSIVE  ======== */
+    header {
+        position: absolute;
+        padding: 0 15px;
+        background-color: transparent;
+    }
+
+    .navbar-toggle i {
+        display: none;
+    }
+
+    .portfolio-navbar {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a {
+        color: var(--color1);
+        line-height: 65px;
+    }
+
+    /* ========== SLIDER OR ABOUT SECTION RESPONSIVE  ======== */
+    #about {
+        padding: 175px 0 150px 0;
+    }
+
+    .about-intro {
+        width: 60%;
+        margin-top: 0;
+        order: 1;
+    }
+
+    .about-intro p {
+        padding-right: 16%;
+    }
+
+
+    /* ========== SLIDER IMAGE RESPONSIVE  ======== */
+    .about-image {
+        width: 40%;
+        order: 2;
+    }
+
+    /* ========== RESUME SECTION RESPONSIVE  ======== */
+    .resume-heading{
+        margin: auto 0;
+        width: 35%;
+        text-align: center;
+    }
+
+    .resume-body{
+        width: 65%;
+        margin-top: 30px;
+        padding-top: 0;
+        padding-left: 40px;
+        min-height: 400px;
+    }
+
+    .resume-item{
+        display: block;
+        padding-left: 20px;
+    }
+
+    .resume-item .resume-link{
+        font-size: 1.1rem;
+    }
+
+    .resume-item.active .resume-link::before{
+        position: unset;
+    }
+
+    .resume-item.active::before{
+        position: absolute;
+        content: "";
+        background-color: #7257F2;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        height: 100%;
+        width: 3px;
+    }
+
+    .resume-item.active{
+        background: linear-gradient(90deg, #775afc1a 0%, #775afc00 100%);
+    }
+
+    /* ========== SKILLS AND PROGRESS BAR  ======== */
+    .bar-content{
+        margin-bottom: 0;
+    }
+
+    /* ========== SERVICE RESPONSIVE  ======== */
+    /* ========== SWIPER PORTFOLIO RESPONSIVE PAGINATION  ======== */
+    /* ========== TESTIMONIAL RESPONSIVE  ======== */
+    /* ========== CONTACT RESPONSIVE  ======== */
+    /* ========== DARK AND LIGHT MODE TOGGLE RESPONSIVE ======== */
+    .theme-toggle {
+        background: none;
+        position: static;
+        transform: none;
+    }
+
+    body:not(.dark) .theme-toggle .lni-sun,
+    body.dark .theme-toggle .lni-night {
+        color: var(--color2);
+    }
+
+    /* ========== TOGGLER ICON COLOR WHEN NABAR STICKY  ======== */
+    body:not(.dark) .header-sticky .theme-toggle .lni-sun,
+    body.dark .header-sticky .theme-toggle .lni-night {
+        color: #3e4455;
+    }
+
+}

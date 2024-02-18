@@ -12,14 +12,14 @@
   <p align="center">
     My Personal PortFolio!
     <br />
-    <a href="https://github.com/MushexAvetisyan/MushexAvetisyan.github.io?tab=readme-ov-file#readme"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/MushexAvetisyan/Personal-Portfolio?tab=readme-ov-file#readme"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://mushexavetisyan.github.io/">View Demo</a>
+    <a href="https://mushexavetisyan.github.io/Personal-Portfolio/">View Demo</a>
     ·
-    <a href="https://gitlab.com/mushegh.avetisyan.web/learnit/-/issues">Report Bug</a>
+    <a href="https://github.com/MushexAvetisyan/Personal-Portfolio/issues">Report Bug</a>
     ·
-    <a href="https://gitlab.com/mushegh.avetisyan.web/learnit/-/issues">Request Feature</a>
+    <a href="https://github.com/MushexAvetisyan/Personal-Portfolio/pulls">Request Feature</a>
   </p>
 
 ## Key Features
@@ -36,7 +36,6 @@
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -45,11 +44,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 LinkedIn - [@Mushegh Avetisyan](https://www.linkedin.com/in/learnit-it-community-884a722b3/) - mushegh.avetisyan.web@gmail.com
 
-Project Link: [https://gitlab.com/mushegh.avetisyan.web/learnit](https://gitlab.com/mushegh.avetisyan.web/learnit)
+Project Link: [https://github.com/MushexAvetisyan/Personal-Portfolio](https://github.com/MushexAvetisyan/Personal-Portfolio)
 
 Phone: +37443260404
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -65,7 +63,6 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Font Awesome](https://fontawesome.com)
 * [Email.js](https://www.emailjs.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 

@@ -1,9 +1,23 @@
-// Toggle visibility of navbar when button clicked
 
 const navToggle = document.querySelector(".navbar-toggle");
 navToggle.addEventListener("click", function () {
     document.querySelector(".portfolio-navbar").classList.toggle("show");
 });
+
+
+const button = document.querySelector('.settings');
+const closeButton = document.querySelector('.close');
+const quickSettings = document.querySelector('.quick-settings');
+
+button.addEventListener('click', () => {
+    quickSettings.classList.remove('none');
+    quickSettings.classList.remove('hide');
+});
+
+closeButton.addEventListener('click', () => {
+    quickSettings.classList.add('hide');
+});
+
 
 // Tab interface for different section of resume
 
@@ -103,7 +117,7 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
 const limit = 200;
 const scrollTopBtn = document.querySelector("#scroll-top-btn");
 
-function scrollToTop() {
+export function scrollToTop() {
     window.scrollTo({top: 0, behavior: "smooth"});
 }
 

@@ -1,0 +1,36 @@
+:root {
+    /*--white: #FFF;*/
+    --gray: #F3F3F3;
+    --gray-mid: #d6d6d6;
+    --gray-dark: #3e3e3e;
+    --button-hover: #ECE8F9;
+    --body-background: #f3f1f9;
+    --red: #da2c4d;
+    --yellow: #f8ab37;
+    --green: #2ecc71;
+    --white: #ffffff;
+    --grey-light: #f2f7f9;
+    --grey: #ecedf3;
+    --black: #080808;
+    --black-blue: #1f2029;
+    --black-blue-light: #353746;
+    --black-blue-light-2: #404255;
+    --black-blue-light-3: #4b4d64;
+    --black-light: #424455;
+}
+
+/* ========== SETTING VARIABLE COLOR ==========  */
+
+body.dark {
+    --bg-color1: #1C1C1C;
+    --bg-color2: #343434;
+    --color1: #FFFF;
+    --color2: #DDD;
+}
+
+body:not(.dark) {
+    --bg-color1: #eaeae9;
+    --bg-color2: #fbfdff;
+    --color1: #3e4455;
+    --color2: #000;
+}

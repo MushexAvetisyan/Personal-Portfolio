@@ -45,9 +45,9 @@ resumeHeading.onclick = (event) => {
 // Navbar header sticky while scrolling
 
 function stickyNav() {
-    var headerHeight = document.querySelector("#about").offsetHeight / 2;
-    var navbar = document.querySelector("header");
-    var scrollValue = window.scrollY;
+    let headerHeight = document.querySelector("#about").offsetHeight / 2;
+    let navbar = document.querySelector("header");
+    let scrollValue = window.scrollY;
 
     if (scrollValue > headerHeight) {
         navbar.classList.add("header-sticky");
@@ -114,18 +114,6 @@ document.querySelector(".theme-toggle").addEventListener("click", () => {
 
 // Scroll to top
 
-const limit = 200;
-const scrollTopBtn = document.querySelector("#scroll-top-btn");
-
-export function scrollToTop() {
-    window.scrollTo({top: 0, behavior: "smooth"});
-}
-
-document.addEventListener("scroll", function () {
-    console.log(window.scrollY);
-    scrollTopBtn.classList.toggle("visible", window.scrollY >= limit);
-});
-
 // Scroll reveal
 
 const sr = ScrollReveal({
@@ -151,3 +139,112 @@ sr.reveal(".service-row", {
 sr.reveal(".resume-body", {
     origin: "top",
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    "use strict";
+
+    // Switch dark/light
+    document.querySelector(".switch").addEventListener('click', function () {
+        let body = document.body;
+        if (body.classList.contains("light")) {
+            body.classList.remove("light");
+            document.querySelector(".switch").classList.remove("switched");
+        } else {
+            body.classList.add("light");
+            document.querySelector(".switch").classList.add("switched");
+        }
+    });
+
+    // Scroll back to top
+    let progressPath = document.querySelector('.progress-wrap path');
+    let pathLength = progressPath.getTotalLength();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+    progressPath.style.strokeDashoffset = pathLength;
+    progressPath.getBoundingClientRect();
+    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+    function updateProgress() {
+        let scroll = window.pageYOffset || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - window.innerHeight;
+        let progress = pathLength - (scroll * pathLength / height);
+        progressPath.style.strokeDashoffset = progress;
+    }
+    updateProgress();
+    window.addEventListener('scroll', updateProgress);
+
+    let offset = 50;
+    let duration = 550;
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > offset) {
+            document.querySelector('.progress-wrap').classList.add('active-progress');
+        } else {
+            document.querySelector('.progress-wrap').classList.remove('active-progress');
+        }
+    });
+
+    document.querySelector('.progress-wrap').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var range = document.querySelector('input[type="range"]');
+
+    range.addEventListener('input', function() {
+        document.body.style.setProperty('--pos', this.value + '%');
+    });
+});
+
+
+const gallery = document.querySelector('.gallery');
+const track = document.querySelector('.gallery-track');
+const cards = document.querySelectorAll('.card');
+const easing = 0.05;
+let startY = 0;
+let endY = 0;
+let raf;
+
+const lerp = (start,end,t) => start * (1-t) + end * t;
+
+function updateScroll() {
+    startY = lerp(startY,endY,easing);
+    gallery.style.height = `${track.clientHeight}px`;
+    track.style.transform = `translateY(-${startY}px)`;
+    activateParallax();
+    raf = requestAnimationFrame(updateScroll);
+    if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
+}
+
+function startScroll() {
+    endY = window.scrollY;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(updateScroll);
+}
+
+function parallax(card) {
+    const wrapper = card.querySelector('.card-image-wrapper');
+    const diff = card.offsetHeight - wrapper.offsetHeight;
+    const {top} = card.getBoundingClientRect();
+    const progress = top / window.innerHeight;
+    const yPos = diff * progress;
+    wrapper.style.transform = `translateY(${yPos}px)`;
+}
+
+const activateParallax = () => cards.forEach(parallax);
+
+function init() {
+    activateParallax();
+    startScroll();
+}
+
+window.addEventListener('load',updateScroll,false);
+window.addEventListener('scroll',init,false);
+window.addEventListener('resize',updateScroll,false);
+

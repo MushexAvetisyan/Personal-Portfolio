@@ -1,0 +1,46 @@
+body:not(.dark) .theme-toggle .lni-sun, .lni-cog,
+body.dark .theme-toggle .lni-night, .lni-cog {
+    cursor: pointer;
+    color: var(--bg-color2);
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+
+body:not(.dark) .theme-toggle .lni-night {
+    display: none;
+
+}
+
+body.dark .theme-toggle .lni-sun {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body:not(.dark) .theme-toggle .lni-sun
+    {
+        color: black;
+    }
+
+    body.dark .theme-toggle .lni-night,
+    body.dark .settings .lni-cog,
+    body.dark .uil-arrow-up{
+        color: white;
+    }
+
+    body:not(.dark) .uil-arrow-up,
+    body:not(.dark) .progress-wrap svg.progress-circle path{
+        color: black;
+        stroke: black;
+    }
+
+    /* ========== TOGGLER ICON COLOR WHEN NABAR STICKY  ======== */
+    body:not(.dark) .header-sticky .theme-toggle .lni-sun, .settings .lni-cog,
+    body.dark .header-sticky .theme-toggle .lni-night,
+    body.dark .header-sticky .settings .lni-cog
+    {
+        color: black;
+    }
+}

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="am">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mushex Avetisyan Personal Portfolio Website</title>
+    <title>Մուշեղ Ավետիսյան Անհատական Պորտֆոլիո</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/variables.css">
 </head>
 
 <body class="dark">
@@ -69,15 +72,9 @@
                     </label>
                 </div>
             </aside>
-            <a class="navbar-link settings">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                     stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path>
-                    <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                </svg>
-            </a>
+            <button class="navbar-link settings">
+                <i class="lni lni-cog"></i>
+            </button>
         </div>
     </div>
 </header>
@@ -109,9 +106,17 @@
             <!-------------------------- Greetings and Introduction Ends -------------------------->
 
             <div class="about-image">
-                <img src="image/profile.png" alt="profile_image">
+                <div class="compare">
+                    <section class="before">
+                        <img src="image/profile.png" alt="profile_image">
+                    </section>
+                    <section class="after">
+                        <img src="image/myimage.png" alt="" />
+                    </section>
+                    <input type="range" id="range" step="0.1">
+                </div>
             </div>
-        </div>
+    </div>
     </div>
 </section>
 
@@ -124,7 +129,7 @@
     <div class="portfolio-container">
         <span class="subtitle">Resume</span>
         <h2>
-            <strong>Curriculam Vitae</strong>
+            <strong>My Achievements</strong>
         </h2>
         <div class="portfolio-row">
 
@@ -386,80 +391,96 @@
             PortFolio
         </span>
         <h2>
-            <strong>What I Do For My Clients</strong>
+            <strong>What I Do For Me And My Clients</strong>
         </h2>
-        <div class="ProjectsSection">
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/Aybido.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>Aybido</h4>
-                        <p>Build desirable backlinks</p>
+        <main class='gallery'>
+            <div class='gallery-track'>
+                <a href="https://aybido.com/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/Aybido.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>Aybido</h4>
+                            <p>Build desirable backlinks</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/FIrstArtGallery.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>FirstArtGallery</h4>
-                        <p>Hand Painted Reproductions and Customized Art</p>
+                </a>
+                <a href="https://ayb.am/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/Ayb.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>Ayb</h4>
+                            <p>Ապագայի կրթությունն այսօր</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/Ayb.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>Ayb</h4>
-                        <p>The Education of the Future Today</p>
+                </a>
+                <a href="https://www.1st-art-gallery.com/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/FIrstArtGallery.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>1st Art Gallery</h4>
+                            <p>Oil Painting Reproductions - Custom Portraits</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/MyEstate.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>MyEstate</h4>
-                        <p>Քո երազանքների անշարժ գույքը</p>
+                </a>
+                <a href="https://myestate.am/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/MyEstate.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>MyEstate</h4>
+                            <p>Ձեր երազանքների անշարժ գույքը</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/wassabi.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>Wasabi</h4>
-                        <p>Wasabi, Sushi And More In Armenia</p>
+                </a>
+                <a href="https://mushexavetisyan.github.io/quiz-game/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/QuizGame.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>Quiz Game</h4>
+                            <p>Quiz Game Dor Developers</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/QuizGame.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>ItQuiz Game</h4>
-                        <p>Quiz Game With IT Questions</p>
+                </a>
+                <a href="https://mushrecipes.vercel.app/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/RecipeApp.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>Recipe App</h4>
+                            <p>Recipe App With Categories</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="ring">
-                <div class="product-content">
-                    <img src="image/RecipeApp.png" alt="">
-                    <div class="img-overlay"></div>
-                    <div class="product-title">
-                        <h4>Recipe App</h4>
-                        <p>Recipe App With Categories</p>
+                </a>
+                <a href="https://wasabi.am/" target="_blank">
+                <div class='card'>
+                    <div class='card-image-wrapper product-content'>
+                        <img src='image/wassabi.png'>
+                        <div class="img-overlay"></div>
+                        <div class="product-title">
+                            <h4>Sushi</h4>
+                            <p>Buy Sushi In Armenia</p>
+                        </div>
                     </div>
                 </div>
+                </a>
             </div>
-        </div>
+        </main>
     </div>
 </section>
 
@@ -593,9 +614,13 @@
 
 <!-- Scroll to top button -->
 
-<button id="scroll-top-btn" type="button" onclick="scrollToTop()">
-    <i class="lni lni-arrow-up"></i>
-</button>
+
+<div class="progress-wrap">
+    <i class="uil uil-arrow-up"></i>
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</div>
 <!-- Scroll to top button ends -->
 
 <script src="js/script.js" type="module"></script>

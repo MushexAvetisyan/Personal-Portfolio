@@ -1284,11 +1284,6 @@ footer {
         order: 1;
     }
 
-    .about-intro p {
-        padding-right: 16%;
-    }
-
-
     /* ========== SLIDER IMAGE RESPONSIVE  ======== */
     .about-image {
         width: 38%;
@@ -1460,26 +1455,121 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1441px) {
+    header .portfolio-row.header-wrap{
+        width: 85%;
+    }
+    .card{
+        width: 17rem;
+    }
+    .about-image{
+        width: 38%;
+    }
     .compare > input[type="range"]{
         left: 2rem;
     }
 }
 
-@media (max-width: 320px) {
-
-    .theme-toggle{
-        top: 40%;
+@media (max-width: 1025px) {
+    .gallery-track{
+        gap: 1.25rem;
+    }
+    #projects h2{
+        font-size: 2rem;
     }
 
+    .compare > input[type="range"]{
+        left: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .brand-name{
+        margin-top: 1rem;
+    }
+
+    .resume-body{
+        width: 55%;
+        padding-left: 5%;
+    }
+
+    .about-intro{
+        width: 50%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .about-image{
+        width: 55%;
+        position: relative;
+        left: 10rem;
+    }
+    .compare > input[type="range"]{
+        left: 6rem;
+    }
     .settings{
         top: 40%;
-        right: 87.5%;
+        right: 94.5%;
         width: 40px;
         height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .theme-toggle{
+        top: 40%;
+        right: 0;
+    }
+}
+
+@media (max-width: 426px) {
+    .settings{
+        right: 90.5%;
+    }
+    .about-image{
+        width: 78%;
+        position: relative;
+        left: 3rem;
+    }
+    .btn-submit{
+        width: 85%;
+    }
+
+    .compare > input[type="range"]{
+        left: 3rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .compare > input[type="range"] {
+        left: 1rem;
+    }
+
+    .btn-submit{
+        width: 82%;
+    }
+}
+
+@media (max-width: 351px) {
+
+    .theme-toggle{
+        top: 40%;
+        right: 0;
+    }
+
+    .settings{
+        top: 40%;
+        right: 88.5%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .compare > input[type="range"] {
+        width: 11rem;
     }
 
     .quick-settings{

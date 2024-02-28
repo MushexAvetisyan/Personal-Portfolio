@@ -105,11 +105,11 @@ div#inked-painted:hover {
 }
 
 .compare .before {
-    mask: linear-gradient(to right, #000 0, var(--pos, 50%), #0000 0);
+    mask: linear-gradient(to right, #000 0, var(--pos, 100%), #0000 0);
 }
 
 .compare .after {
-    mask: linear-gradient(to right, #0000 0, var(--pos, 50%), #000 0);
+    mask: linear-gradient(to right, #0000 0, var(--pos, 100%), #000 0);
 }
 
 .compare > input[type="range"] {
@@ -118,9 +118,10 @@ div#inked-painted:hover {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     position: relative;
-    top: 8rem;
+    top: 21rem;
     width: 15rem;
     left: 6rem;
+    height: 2px;
 }
 
 .compare > input[type="range"]::-webkit-slider-thumb {

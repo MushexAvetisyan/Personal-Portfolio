@@ -1,5 +1,5 @@
-body:not(.dark) .theme-toggle .lni-sun, .lni-cog,
-body.dark .theme-toggle .lni-night, .lni-cog {
+body:not(.dark) .theme-toggle .lni-sun, .lni-cog, .player .lni-music,
+body.dark .theme-toggle .lni-night, .lni-cog, .player .lni-music {
     cursor: pointer;
     color: var(--bg-color2);
     padding: 10px 10px;
@@ -19,13 +19,16 @@ body.dark .theme-toggle .lni-sun {
 }
 
 @media (min-width: 768px) {
-    body:not(.dark) .theme-toggle .lni-sun
+    body:not(.dark) .theme-toggle .lni-sun,
+    body:not(.dark) .settings .lni-cog,
+    body:not(.dark) .player .lni-music
     {
         color: black;
     }
 
     body.dark .theme-toggle .lni-night,
     body.dark .settings .lni-cog,
+    body.dark .player .lni-music,
     body.dark .uil-arrow-up{
         color: white;
     }
@@ -39,7 +42,8 @@ body.dark .theme-toggle .lni-sun {
     /* ========== TOGGLER ICON COLOR WHEN NABAR STICKY  ======== */
     body:not(.dark) .header-sticky .theme-toggle .lni-sun, .settings .lni-cog,
     body.dark .header-sticky .theme-toggle .lni-night,
-    body.dark .header-sticky .settings .lni-cog
+    body.dark .header-sticky .settings .lni-cog,
+    body.dark .header-sticky .player .lni-music
     {
         color: black;
     }

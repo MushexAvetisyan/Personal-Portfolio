@@ -1,0 +1,597 @@
+/*MEDIA*/
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+/* ============= Medium devices (tablets, 768px and up) ============= */
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        color: var(--color1);
+        font-weight: 600;
+    }
+
+    /* ========== HEADER RESPONSIVE  ======== */
+    header {
+        position: absolute;
+        padding: 0 15px;
+        background-color: transparent;
+    }
+
+    .navbar-toggle i {
+        display: none;
+    }
+
+    .portfolio-navbar {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a {
+        color: var(--color1);
+        line-height: 65px;
+    }
+
+    /* ========== SLIDER OR ABOUT SECTION RESPONSIVE  ======== */
+    #about {
+        padding: 175px 0 150px 0;
+    }
+
+    .about-intro {
+        width: 60%;
+        margin-top: 0;
+        order: 1;
+    }
+
+    /* ========== SLIDER IMAGE RESPONSIVE  ======== */
+    .about-image {
+        width: 38%;
+        order: 2;
+        height: 25rem;
+    }
+
+    /* ========== RESUME SECTION RESPONSIVE  ======== */
+    .resume-heading {
+        margin: auto 0;
+        width: 35%;
+        text-align: center;
+    }
+
+    .resume-body {
+        width: 65%;
+        margin-top: 30px;
+        padding-top: 0;
+        padding-left: 40px;
+        min-height: 400px;
+    }
+
+    .resume-item {
+        display: block;
+        padding-left: 20px;
+    }
+
+    .resume-item .resume-link {
+        font-size: 1.1rem;
+    }
+
+    .resume-item.active .resume-link::before {
+        position: unset;
+    }
+
+    .resume-item.active::before {
+        position: absolute;
+        content: "";
+        background-color: #7257F2;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        height: 100%;
+        width: 3px;
+    }
+
+    .resume-item.active {
+        background: linear-gradient(90deg, #775afc1a 0%, #775afc00 100%);
+    }
+
+    /* ========== SKILLS AND PROGRESS BAR  ======== */
+    .bar-content {
+        margin-bottom: 0;
+    }
+
+    /* ========== SERVICE RESPONSIVE  ======== */
+    .service-count {
+        width: 20%;
+    }
+
+    .services-name {
+        width: 70%;
+    }
+
+    .services-list .service-row:not(:last-child) {
+        padding-bottom: 0;
+    }
+
+
+    /* ========== CONTACT RESPONSIVE  ======== */
+    .contact-info {
+        width: 35%;
+        padding-top: 15px;
+    }
+
+    .contact-item {
+        padding-left: 8px;
+        display: flex;
+    }
+
+    .contact-icon i {
+        margin-right: 2px;
+    }
+
+    .contact-detail {
+        font-size: 13px;
+    }
+
+    .contact-heading {
+        display: none;
+    }
+
+    .footer-contact {
+        width: 65%;
+        padding-left: 40px;
+    }
+
+    .input-wrapper {
+        padding: 0 10px;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .input-subject, .form-submit {
+        padding: 10px;
+    }
+
+    .btn-submit {
+        width: 89%;
+    }
+
+
+
+
+
+
+    /*PLAYER*/
+    .collection {
+        width: 50%;
+        flex: 1;
+        margin-top: 1.5rem;
+    }
+    .lead {
+        max-width: 600px;
+        font-weight: 400;
+        color: #15253a;
+        letter-spacing: 0.5px;
+        line-height: 1.2rem;
+    }
+    .musicbox {
+        margin-top: 1rem;
+    }
+    .musicbox ul li h3{
+        color: #15253a;
+        font-weight: 400;
+    }
+    .hor {
+        margin: 1rem 0 1rem 0;
+        max-width: 500px;
+        background-color: #c7d8fc;
+    }
+    .playbox {
+        flex: 1;
+        margin: 0.5rem auto;
+        text-align: center;
+        border-radius: 8px;
+        background-color: #c7d8fc8c;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+        background-color: #222427;
+        border-radius: 50%;
+        margin: 2rem auto;
+        display: flex;
+        border: 3px solid #37b0d8;
+        border-top: 3px solid #0254ec;
+
+    }
+    .circle2 {
+        width: 180px;
+        height: 180px;
+        background-color: #252629;
+        border-radius: 50%;
+        border: 3px solid #282529;
+        border-top: 3px solid #66bfe9;
+        align-self: center;
+        display: flex;
+        margin: auto;
+
+    }
+    .circle2 .fluid-img{
+        width: 100%;
+        height: 170px;
+        border-radius: 50%;
+        align-self: center;
+        margin: auto;
+    }
+    #song-name{
+        color: #15253a;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    .circle.animate {
+        animation: anticlock 6s infinite linear;
+    }
+    .circle2.animate {
+        animation: clockwise 6s infinite linear;
+    }
+    .media-btn {
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+        margin: auto;
+        cursor: pointer;
+        margin: 1rem;
+    }
+    @keyframes anticlock {
+        from {
+            transform: rotate(360deg);
+        } to {
+              transform: rotate(0deg);
+          }
+    }
+    @keyframes clockwise {
+        from {
+            transform: rotate(0deg);
+        } to {
+              transform: rotate(360deg);
+          }
+    }
+
+    /* ========== DARK AND LIGHT MODE TOGGLE RESPONSIVE ======== */
+    .theme-toggle {
+        background: none;
+        position: static;
+        transform: none;
+    }
+
+    .settings, .player {
+        background: none;
+        position: static;
+        transform: none;
+        color: white;
+        right: 11rem;
+        margin-top: 5px;
+    }
+
+    /*FOOTER RESPONSIVE*/
+    .footer-top {
+        display: block;
+        border-bottom: 1px solid var(--bg-color1);
+    }
+
+    .portfolio-row.footer-wrap {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright-text {
+        order: 0;
+        padding-top: 0;
+    }
+
+    #scroll-top-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 36px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        background-image: linear-gradient(to right, #977ec7 0%, #f987d6 100%);
+        transition: 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000;
+    }
+
+    #scroll-top-btn i {
+        font-size: 1rem;
+        color: #FFF;
+    }
+
+    #scroll-top-btn.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 1441px) {
+    header .portfolio-row.header-wrap{
+        width: 85%;
+    }
+    .card{
+        width: 17rem;
+    }
+    .about-image{
+        width: 38%;
+    }
+    .compare > input[type="range"]{
+        left: 2rem;
+    }
+}
+
+@media (max-width: 1025px) {
+    .gallery-track{
+        gap: 1.25rem;
+    }
+    #projects h2{
+        font-size: 2rem;
+    }
+
+    .compare > input[type="range"]{
+        left: 5rem;
+    }
+    .collection {
+        width: 90%;
+        flex: 1;
+        margin: 1.5rem auto;
+    }
+    .playbox {
+        flex: 1;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .brand-name{
+        margin-top: 1rem;
+    }
+
+    .resume-body{
+        width: 55%;
+        padding-left: 5%;
+    }
+
+    .about-intro{
+        width: 50%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .about-image{
+        width: 55%;
+        position: relative;
+        left: 10rem;
+    }
+    .compare > input[type="range"]{
+        left: 6rem;
+    }
+    .settings, .player{
+        top: 40%;
+        right: 94.5%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .theme-toggle{
+        top: 40%;
+        right: 0;
+    }
+
+    .action_buttons ul{
+        display: flex;
+        align-items: center;
+    }
+    #slider{
+        position: relative;
+        right: 0;
+        width: 380px;
+        display: block;
+        font-size: 24px;
+    }
+
+    header .portfolio-row.header-wrap {
+        width: 100%;
+    }
+}
+
+@media (max-width: 426px) {
+    .settings, .player{
+        right: 90.5%;
+    }
+    .about-image{
+        width: 78%;
+        position: relative;
+        left: 3rem;
+    }
+    .btn-submit{
+        width: 85%;
+    }
+
+    .compare > input[type="range"]{
+        left: 3rem;
+    }
+    #slider{
+        position: relative;
+        right: 2rem;
+        width: 190px;
+        display: block;
+        font-size: 15px;
+    }
+
+    .section-dropdown{
+        background: var(--color1);
+    }
+
+    .dropdown:checked + label, .dropdown:not(:checked) + label{
+        color: black;
+    }
+}
+
+@media (max-width: 376px) {
+    .compare > input[type="range"] {
+        left: 1rem;
+    }
+
+    .btn-submit{
+        width: 82%;
+    }
+    #slider{
+        position: relative;
+        right: 2rem;
+        width: 190px;
+        display: block;
+        font-size: 15px;
+    }
+
+    .section-dropdown{
+        background: var(--color1);
+    }
+
+    .dropdown:checked + label, .dropdown:not(:checked) + label{
+        color: black;
+    }
+}
+
+@media (max-width: 351px) {
+
+    .theme-toggle{
+        top: 40%;
+        right: 0;
+    }
+
+    .settings, .player{
+        top: 40%;
+        right: 88.5%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .compare > input[type="range"] {
+        width: 11rem;
+    }
+
+    .quick-settings{
+        max-width: 275px;
+    }
+
+    .close, .PlayerClose{
+        color: white;
+    }
+
+    .certificate{
+        font-size: 15px;
+    }
+
+    .contact-detail span{
+        font-size: 13px;
+    }
+
+    .btn-submit{
+        width: 79%;
+    }
+
+    .contact-info li{
+        padding-left: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .contact-icon i{
+        margin-right: 10px;
+    }
+
+    .compare > input[type="range"]{
+        left: 2rem;
+    }
+
+    #slider{
+        position: relative;
+        right: 2rem;
+        width: 0;
+        display: block;
+        font-size: 15px;
+    }
+
+    .section-dropdown{
+        background: var(--color1);
+    }
+
+    .dropdown:checked + label, .dropdown:not(:checked) + label{
+        color: black;
+    }
+
+    .quick-Player{
+        max-width: 320px;
+    }
+
+    #song-name{
+        font-size: 1rem;
+    }
+
+    .controls audio{
+        width: 17rem;
+        position: relative;
+    }
+
+    .music_controls{
+        display: flex;
+        width: 5rem;
+        position: relative;
+        left: 1rem;
+    }
+
+    .circle{
+        width: 210px;
+        height: 210px;
+        background-color: #222427;
+        border-radius: 50%;
+        margin: 2rem auto;
+        display: flex;
+        border: 3px solid #37b0d8;
+        border-top: 3px solid #0254ec;
+    }
+
+    .circle2{
+        width: 180px;
+        height: 180px;
+        background-color: rgb(37, 38, 41);
+        border-radius: 50%;
+        border-width: 3px;
+        border-style: solid;
+        border-color: rgb(102, 191, 233) rgb(40, 37, 41) rgb(40, 37, 41);
+        border-image: initial;
+        align-self: center;
+        display: flex;
+        margin: auto;
+    }
+
+    .circle2 img{
+        border-radius: 50%;
+    }
+}

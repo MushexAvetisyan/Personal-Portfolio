@@ -6,7 +6,7 @@
 
 
 <div align="center">
-<img src="./image/Preview.png"></img>
+<img src="assets/image/Preview.png"></img>
 </div>
 
   <p align="center">

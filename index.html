@@ -8,9 +8,10 @@
     <title>Մուշեղ Ավետիսյան Անհատական Պորտֆոլիո</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
 </head>
 
 <body class="dark">
@@ -28,12 +29,20 @@
             <div class="portfolio-navbar">
 
                 <ul>
-                    <li><a href="#about" class="navbar-link active-link">Home</a></li>
-                    <li><a href="#resume" class="navbar-link">Resume</a></li>
-                    <li><a href="#services" class="navbar-link">Services</a></li>
-                    <li><a href="#projects" class="navbar-link">Projects</a></li>
-                    <li><a href="#contact" class="navbar-link">Contact</a></li>
+                    <li><a href="#about" class="active-link">Home</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li>
+                        <div class="sec-center">
+                            <input class="dropdown" type="checkbox" id="dropdown" name="dropdown"/>
+                            <label class="for-dropdown" for="dropdown">My Tools <i
+                                    class="uil uil-arrow-down"></i></label>
+                            <div class="section-dropdown">
+                                <a target="_blank" href="pages/timer.html">My Timer For Work</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
 
@@ -43,38 +52,77 @@
             <div class="navbar-toggle">
                 <i class="lni lni-grid-alt"></i>
             </div>
-            <button class="theme-toggle" type="button">
-                <i class="lni lni-night"></i>
-                <i class="lni lni-sun"></i>
-            </button>
-            <aside class="quick-settings none hide">
-                <div class="quick-settings--headline">
-                    <h2>Quick Settings</h2>
-                    <a class="navbar-link close" style="cursor: pointer; margin-top: 3rem; color: white">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                             stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                             stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M18 6l-12 12"></path>
-                            <path d="M6 6l12 12"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="quick-settings__content">
-                    <label class="switch-wrapper">
+
+            <div class="action_buttons">
+                <button class="theme-toggle" type="button">
+                    <i class="lni lni-night"></i>
+                    <i class="lni lni-sun"></i>
+                </button>
+                <aside class="quick-settings none hide">
+                    <div class="quick-settings--headline">
+                        <h2>Quick Settings</h2>
+                        <a class="navbar-link close" style="cursor: pointer; margin-top: 3rem; color: white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M18 6l-12 12"></path>
+                                <path d="M6 6l12 12"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="quick-settings__content">
+                        <label class="switch-wrapper">
                                     <span class="switch__label">
-                                        Fifth Option
+                                        Change Font Color
                                     </span>
-                        <span class="switch">
-                                        <input type="checkbox">
+                            <span class="switch">
+                                        <input type="checkbox" id="colorCheckbox">
                                         <span class="slider round"></span>
                                     </span>
-                    </label>
-                </div>
-            </aside>
-            <button class="navbar-link settings">
-                <i class="lni lni-cog"></i>
-            </button>
+                        </label>
+                    </div>
+                </aside>
+                <button class="navbar-link settings">
+                    <i class="lni lni-cog"></i>
+                </button>
+                <aside class="quick-Player none hide">
+                    <div class="quick-Player__headline">
+                        <h2>My Music</h2>
+                        <a class="navbar-link PlayerClose" style="cursor: pointer; margin-top: 3rem; color: white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M18 6l-12 12"></path>
+                                <path d="M6 6l12 12"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="playbox">
+                        <div class="controller">
+                            <div id="circle-bg" class="circle">
+                                <div id="circle-sm" class="circle2"><img id="cover" src="" class="fluid-img"></div>
+                            </div>
+                            <div class="songs">
+                                <h2 id="song-name">Travel love Beats</h2>
+                                <div class="controls">
+                                    <audio controls id="audio" src=""></audio>
+                                    <div class="music_controls">
+                                        <img id="backward" class="media-btn" src="./assets/image/backward-button.png">
+                                        <img id="play-stop" class="media-btn">
+                                        <img id="forward" class="media-btn" src="./assets/image/fast-forward.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <button class="navbar-link player">
+                    <i class="lni lni-music"></i>
+                </button>
+            </div>
+
         </div>
     </div>
 </header>
@@ -92,9 +140,11 @@
             <div class="about-intro">
 
                 <span class="subtitle">Hello</span>
+                <div id="slider" class="about-text">
+                    <h1 class="span">I am</h1>
+                    <h3 class="span" id="sliderValue"></h3>
+                </div>
                 <div class="about-text">
-                    <h1>I am <strong>Mushegh</strong></h1>
-                    <h3>Full Stack Web Developer</h3>
                     <p>If You Are Looking For a Developer to Build Your <strong>Website?</strong>
                         Let`s Shake Hands With Me</p>
                     <div class="hello-btn">
@@ -108,15 +158,15 @@
             <div class="about-image">
                 <div class="compare">
                     <section class="before">
-                        <img src="image/profile.png" alt="profile_image">
+                        <img src="assets/image/profile.png" alt="profile_image">
                     </section>
                     <section class="after">
-                        <img src="image/myimage.png" alt="" />
+                        <img src="assets/image/myimage.png" alt=""/>
                     </section>
-                    <input type="range" id="range" value="100" step="0.1">
+                    <label for="range"></label><input type="range" id="range" value="100" step="0.1">
                 </div>
             </div>
-    </div>
+        </div>
     </div>
 </section>
 
@@ -216,9 +266,9 @@
                     <div class="resume-content">
                         <span class="years">2024-Now</span>
                         <div class="qualification-content">
-                            <h4 class="role"></h4>
+                            <h4 class="role">Checkin Agent</h4>
                             <h6 class="organization">Armenia International Airport (Zvartnots)</h6>
-                            <p> </p>
+                            <p>Checkin | Registration </p>
                         </div>
                     </div>
                 </div>
@@ -404,88 +454,88 @@
         <main class='gallery'>
             <div class='gallery-track'>
                 <a href="https://aybido.com/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/Aybido.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>Aybido</h4>
-                            <p>Build desirable backlinks</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/Aybido.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>Aybido</h4>
+                                <p>Build desirable backlinks</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://ayb.am/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/Ayb.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>Ayb</h4>
-                            <p>Ապագայի կրթությունն այսօր</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/Ayb.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>Ayb</h4>
+                                <p>Ապագայի կրթությունն այսօր</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://www.1st-art-gallery.com/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/FIrstArtGallery.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>1st Art Gallery</h4>
-                            <p>Oil Painting Reproductions - Custom Portraits</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/FIrstArtGallery.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>1st Art Gallery</h4>
+                                <p>Oil Painting Reproductions - Custom Portraits</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://myestate.am/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/MyEstate.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>MyEstate</h4>
-                            <p>Ձեր երազանքների անշարժ գույքը</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/MyEstate.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>MyEstate</h4>
+                                <p>Ձեր երազանքների անշարժ գույքը</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://mushexavetisyan.github.io/quiz-game/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/QuizGame.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>Quiz Game</h4>
-                            <p>Quiz Game Dor Developers</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/QuizGame.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>Quiz Game</h4>
+                                <p>Quiz Game Dor Developers</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://mushrecipes.vercel.app/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/RecipeApp.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>Recipe App</h4>
-                            <p>Recipe App With Categories</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/RecipeApp.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>Recipe App</h4>
+                                <p>Recipe App With Categories</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
                 <a href="https://wasabi.am/" target="_blank">
-                <div class='card'>
-                    <div class='card-image-wrapper product-content'>
-                        <img src='image/wassabi.png'>
-                        <div class="img-overlay"></div>
-                        <div class="product-title">
-                            <h4>Sushi</h4>
-                            <p>Buy Sushi In Armenia</p>
+                    <div class='card'>
+                        <div class='card-image-wrapper product-content'>
+                            <img src='assets/image/wassabi.png' alt="">
+                            <div class="img-overlay"></div>
+                            <div class="product-title">
+                                <h4>Sushi</h4>
+                                <p>Buy Sushi In Armenia</p>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
             </div>
         </main>
@@ -545,20 +595,24 @@
                 <form id="contact-form" data-form>
                     <div class="portfolio-row">
                         <div class="input-wrapper">
-                            <input type="text" name="from_name" id="from_name" placeholder="Enter your name"
-                                   class="input-control" required data-form-input>
+                            <label for="from_name"></label><input type="text" name="from_name" id="from_name"
+                                                                  placeholder="Enter your name"
+                                                                  class="input-control" required data-form-input>
                         </div>
                         <div class="input-wrapper">
-                            <input type="email" id="to_name" name="to_name" placeholder="Enter your email"
-                                   class="input-control" required data-form-input>
+                            <label for="to_name"></label><input type="email" id="to_name" name="to_name"
+                                                                placeholder="Enter your email"
+                                                                class="input-control" required data-form-input>
                         </div>
                         <div class="input-subject">
-                            <input type="text" id="subject" name="subject" placeholder="Enter your subject"
-                                   class="input-control">
+                            <label for="subject"></label><input type="text" id="subject" name="subject"
+                                                                placeholder="Enter your subject"
+                                                                class="input-control">
                         </div>
                         <div class="input-subject">
-                                <textarea id="message" name="message" rows="9" placeholder="Your Message"
-                                          class="contact-msg"></textarea>
+                            <label for="message"></label><textarea id="message" name="message" rows="9"
+                                                                   placeholder="Your Message"
+                                                                   class="contact-msg"></textarea>
                         </div>
                     </div>
                     <div class="form-submit">
@@ -631,8 +685,9 @@
 </div>
 <!-- Scroll to top button ends -->
 
-<script src="js/script.js" type="module"></script>
-<script src="js/email.js" type="module"></script>
+<script src="assets/js/script.js" type="module"></script>
+<script src="assets/js/email.js" type="module"></script>
+<script src="assets/js/songs.js" type="module"></script>
 <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

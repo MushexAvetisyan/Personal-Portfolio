@@ -6,16 +6,28 @@ navToggle.addEventListener("click", function () {
 
 
 const button = document.querySelector('.settings');
+const playerButton = document.querySelector('.player');
+const PlayercloseButton = document.querySelector('.PlayerClose');
 const closeButton = document.querySelector('.close');
 const quickSettings = document.querySelector('.quick-settings');
+const quickPlayer = document.querySelector('.quick-Player');
 
 button.addEventListener('click', () => {
     quickSettings.classList.remove('none');
     quickSettings.classList.remove('hide');
 });
 
+playerButton.addEventListener('click', () => {
+    quickPlayer.classList.remove('none');
+    quickPlayer.classList.remove('hide');
+});
+
 closeButton.addEventListener('click', () => {
     quickSettings.classList.add('hide');
+});
+
+PlayercloseButton.addEventListener('click', () => {
+    quickPlayer.classList.add('hide');
 });
 
 
@@ -168,14 +180,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateProgress() {
         let scroll = window.pageYOffset || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - window.innerHeight;
-        let progress = pathLength - (scroll * pathLength / height);
-        progressPath.style.strokeDashoffset = progress;
+        progressPath.style.strokeDashoffset = pathLength - (scroll * pathLength / height);
     }
     updateProgress();
     window.addEventListener('scroll', updateProgress);
 
     let offset = 50;
-    let duration = 550;
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > offset) {
             document.querySelector('.progress-wrap').classList.add('active-progress');
@@ -195,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    var range = document.querySelector('input[type="range"]');
+    let range = document.querySelector('input[type="range"]');
 
     range.addEventListener('input', function() {
         document.body.style.setProperty('--pos', this.value + '%');
@@ -248,3 +258,87 @@ window.addEventListener('load',updateScroll,false);
 window.addEventListener('scroll',init,false);
 window.addEventListener('resize',updateScroll,false);
 
+
+
+
+// Function to change colors
+function applyColors(colors) {
+    document.querySelectorAll('h1, p, a').forEach(function(element) {
+        element.style.color = colors.textColor;
+    });
+}
+
+// Event listener for checkbox
+document.getElementById('colorCheckbox').addEventListener('change', function() {
+    if (this.checked) {
+        // Apply new colors and save to local storage
+        let colors = {
+            textColor: '#0077ee' // Change this to your desired color
+        };
+        applyColors(colors);
+        localStorage.setItem('colors', JSON.stringify(colors));
+    } else {
+        // Remove colors and clear local storage
+        document.querySelectorAll('h1, p, a').forEach(function(element) {
+            element.style.color = '';
+        });
+        localStorage.removeItem('colors');
+    }
+
+    // Save checkbox state in local storage
+    localStorage.setItem('checkboxState', this.checked);
+});
+
+// Restore checkbox state and colors from local storage
+let checkboxState = localStorage.getItem('checkboxState');
+let savedColors = localStorage.getItem('colors');
+
+if (checkboxState === 'true') {
+    document.getElementById('colorCheckbox').checked = true;
+    if (savedColors) {
+        applyColors(JSON.parse(savedColors));
+    }
+}
+
+
+
+/*TYPING MESSAGE*/
+
+let sliderCounter = 0;
+let sliderContent = [
+    "Full Stack Web Developer",
+    "Hacker",
+    "Photographer"
+];
+let slider = document.querySelector("#slider");
+let sliderValue = document.querySelector("#sliderValue");
+
+function slide() {
+    if (sliderCounter >= sliderContent.length) {
+        sliderCounter = 0;
+    }
+
+    sliderValue.innerHTML = "";
+
+    sliderValue.classList.remove("holder-animation");
+    void sliderValue.offsetWidth;
+    sliderValue.classList.add("holder-animation");
+
+    for (let i = 0; i < sliderContent[sliderCounter].length; i++) {
+        let letterDiv = document.createElement("div");
+        letterDiv.innerHTML = sliderContent[sliderCounter][i];
+
+        if (letterDiv.innerHTML === " ") {
+            letterDiv.innerHTML = "&nbsp;";
+        }
+        letterDiv.classList.add("start");
+        letterDiv.classList.add("animation");
+        letterDiv.style.animationDelay = i / 10 + "s";
+        sliderValue.appendChild(letterDiv);
+    }
+
+    sliderCounter++;
+}
+
+slide();
+setInterval(slide, 4000);

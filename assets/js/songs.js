@@ -25,16 +25,6 @@ let isPlaying = true;
 
 const songList = [
     {
-        name: "3.33 - Nkari Mej resample",
-        source: "./assets/music/3.33 - Nkari Mej resample.mp3",
-        cover: "./assets/image/maxresdefault.jpg"
-    },
-    {
-        name: "3.33 - 3000",
-        source: "./assets/music/3.33 - 3000.mp3",
-        cover: "./assets/image/artworks.jpg"
-    },
-    {
         name: "21 Savage, d4vd - Call Me Revenge",
         source: "./assets/music/21 Savage, d4vd - Call Me Revenge.mp3",
         cover: "./assets/image/21.jpg"
